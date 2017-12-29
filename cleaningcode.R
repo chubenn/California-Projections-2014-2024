@@ -31,8 +31,7 @@ calproj_clean <- calproj %>%
     gen_ocp == "47" ~ "Construction and Extraction Occupations",
     gen_ocp == "49" ~ "Installation, Maintenance, and Repair Occupations",
     gen_ocp == "51" ~ "Production Occupations",
-    gen_ocp == "53" ~ "Management Occupations",
-    gen_ocp == "55" ~ "Transportation and Material Moving Occupations"),
+    gen_ocp == "53" ~ "Transportation and Material Moving Occupations"),
    subtype = case_when(
     gen_ocp == "11" & sub_cat == "1" ~ "Top Executives",
     gen_ocp == "11" & sub_cat == "2" ~ "Advertising, Marketing, Promotions, Public Relations, and Sales Managers",
