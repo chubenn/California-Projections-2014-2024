@@ -1,6 +1,6 @@
 install.packages("pacman")
 pacman::p_load(tidyverse,xlsx)
-calproj <- read_csv("GitHub/CaliforniaProjections/calproj.csv", 
+calproj <- read_csv("calproj.csv", 
                       col_types = cols(`Annual Average Percent Change` = col_number(), 
                       `Median Annual` = col_number(), `Median Hourly` = col_number(), 
                       `Percent Change 2014-2024` = col_number(), 
@@ -149,5 +149,5 @@ cleanest <- calproj_clean %>%
   select(soc_code, general_occupation,subtype,occupational_title,estimated_employment_2014,
          projected_employment_2024,percent_change_2014_2024,annual_average_percent_change,
          new_jobs,replace_ment_needs,total_jobs,median_hourly,median_annual,entry_level_education,
-         work_experience,on_the_job_training) %>%
+         work_experience,on_the_job_training,numeric_change_2014_2024) %>%
 write_csv("C:/Users/Branly Mclanbry/Documents/GitHub/CaliforniaProjections/use.dat.csv")
